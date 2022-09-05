@@ -1,6 +1,6 @@
 <!-- Logo -->
 <h1 align="center">
-  <img src="https://github.com/Dog-Face-Development/dog-face-development.github.io/blob/master/docs/images/logo.png" height="250px" width="300px" alt="dog-face-development.github.io">
+  <img src="https://github.com/Dog-Face-Development/dog-face-development.github.io/blob/master/docs/images/logo.png" height="175px" width="350px" alt="dog-face-development.github.io">
   <br>
   dog-face-development.github.io
 </h1>
