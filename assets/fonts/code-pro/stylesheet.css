@@ -1,0 +1,9 @@
+/* Copyright (c) 2018 - 2019 Dog Face Development Co. */
+@font-face {
+    font-family: 'code_pro';
+    src: url('Code_Pro_Demo-webfont.woff2') format('woff2'),
+         url('Code_Pro_Demo-webfont.woff') format('woff'),
+         url('Code_Pro_Demo-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
