@@ -92,6 +92,7 @@ This software uses the following open source packages, projects, services or web
   <tr>
     <td align="center"><a href="https://github.com/">Web</a> - <a href="https://github.com/pricing">Plans</a></td>
     <td align="center"><a href="https://www.w3.org">Web</a> - <a href="https://www.w3.org/support/">Donate</a></td>
+    <td align="center"><a href="https://www.w3schools.com/default.asp">Web</a> - <a href="https://www.w3schools.com/pro/index.php">Pro</a></td>
     <td align="center"><a href="https://fontawesome.com/">Web</a> - <a href="https://fontawesome.com/plans">Plans</a></td>
 </table>
 
