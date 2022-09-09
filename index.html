@@ -1,4 +1,4 @@
-<!-- Copyright (C) 2018 - 2022 Dog Face Development Co. -->
+<!-- Copyright (C) 2018 - 2019 Dog Face Development Co. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +7,7 @@
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dog Face Development Co - Software Development for the 21st Century</title>
-    <meta name="description" content="Dog Face Development Co is a modern software development company headquartered in beautiful Vancouver, BC; specializing in personal and commercial desktop and website development.">
+    <meta name="description" content="Dog Face Development Co is a modern software development company headquartered in beautiful Vancouver, BC; specializing in personal and commerical desktop and website development.">
     <meta name="keywords" content="dog, face, development, dog face development co, dog face development, python, github, bars, periodic table, periodic, table, erin, hunter, book, chooser, erin hunter book chooser">
     <meta name="theme-color" content="#ff3700">
     <meta name="msapplication-navbutton-color" content="#ff3700">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css"  href="assets/css/bootstrap.css">
 
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="assets/fonts/code-pro/stylesheet.css">
@@ -257,30 +258,54 @@
         <div class="container">
              <div class="pull-left">
                 <i class="far fa-copyright"></i>
-                <p>2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Dog Face Development Co. and <a href="https://dribble.com/jennpereira">Jenn Pereira</a> <a href="https://themeforces.com">(ThemeForces.com)</a>. Icons from <a href="https://fontawesome.com">Font Awesome!</a> All Rights Reserved.</p>
+                <p>2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> Dog Face Development Co. and <a href="https://dribble.com/jennpereira">Jenn Pereira</a> <a href="https://themeforces.com">(ThemeForces.com)</a>. Icons from <a href="https://fontawesome.com">Font Awesome!</a> All Rights Reserved.</p>
                 <p><a href="legal/EULA.txt">Terms & Conditions</a> - Updated August 2018 &#124; <a href="legal/EULA.txt">End User License Agreement</a>- Updated August 2018 &#124; <a href="legal/privacypolicy.htm">Privacy Policy</a> - Updated August 2018 &#124; <a href="legal/enviropolicy.txt">Enviromental Policy</a></p>
             </div>
             <div class="pull-right">
                 <ul class="social-media list-inline">
-                    <li><a href="#"><span class="fas fa-envelope-open"></span></a></li>
-                    <li><a href="#"><span class="fab fa-github"></span></a></li>
+                    <li><a href="mailto: willtheorangeguy@outlook.com"><span class="fas fa-envelope-open"></span></a></li>
+                    <li><a href="https://github.com/Dog-Face-Development/"><span class="fab fa-github"></span></a></li>
                     <li><a href="#"><span class="fab fa-instagram"></span></a></li>
                     <li><a href="#"><span class="fab fa-stack-overflow"></span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    <div id="outdated"></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="outdatedbrowser/outdatedbrowser.min.js"
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
-
+    <script>
+    //event listener: DOM ready
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function () {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      //call plugin function after DOM ready
+      addLoadEvent(function () {
+        outdatedBrowser({
+          bgColor: '#f25648',
+          color: '#ffffff',
+          lowerThan: 'transform',
+          languagePath: 'your_path/outdatedbrowser/lang/en.html'
+        })
+      });</script>
   </body>
 </html>
