@@ -1,4 +1,4 @@
-name: pages-build-deployment
+name: Pages Build
 
 on:
   # Runs on pushes targeting the default branch, change to gh-pages if on gh-pages branch
