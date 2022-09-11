@@ -63,6 +63,18 @@ $ cd dog-face-development.github.io
 $ index.html
 ```
 
+You can also pull the [Docker](https://www.docker.com/) image from GitHub Packages. From your command line:
+
+```bash
+# Pull image
+$ docker pull docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
+
+# Run container
+$ docker run -d -p 8000:80 docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
+
+# Now, navigate to localhost in your browser to see the webpage
+```
+
 If support is required, please open a **[GitHub Discussion](https://github.com/Dog-Face-Development/dog-face-development.github.io/discussions)** or join our **[Discord](https://discord.gg/yv2FGFVpNc)**.
 
 ## Contributing
