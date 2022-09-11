@@ -16,5 +16,6 @@ This folder includes all of the docs for the dog-face-development.github.io webs
 |   |   ├── PRIVACY.html
 |   |   ├── TERMS.md
 |   |   ├── TERMS.html
+|   ├── USAGE.md
 └── README.md
 ```
