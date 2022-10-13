@@ -1,40 +1,24 @@
 <!-- Logo -->
 <h1 align="center">
-  <img src="https://github.com/Dog-Face-Development/dog-face-development.github.io/blob/master/docs/images/logo.png" height="175px" width="350px" alt="dog-face-development.github.io">
+  <img src="https://github.com/Dog-Face-Development/dog-face-development.github.io/blob/master/docs/images/logo.png" height="175px" width="350px">
   <br>
   dog-face-development.github.io
 </h1>
 
-<!-- Copy -->
-<h4 align="center">The open-source repository behind our website.</h4>
 
-<!-- Badges -->
-<div align="center">
-  <!-- Stability -->
-  <img alt="Docker State" src="https://github.com/Dog-Face-Development/dog-face-development.github.io/actions/workflows/docker-publish.yml/badge.svg">
-  <!-- Stability -->
-  <img alt="GitHub Pages State" src="https://github.com/Dog-Face-Development/dog-face-development.github.io/actions/workflows/pages-build-deployment.yml/badge.svg">
-  <!-- CodeQL -->
-  <img alt="CodeQL State" src="https://github.com/Dog-Face-Development/dog-face-development.github.io/actions/workflows/codeql-analysis.yml/badge.svg">
-  <!-- Version -->
-  <img alt="GitHub Version" src="https://img.shields.io/github/v/release/Dog-Face-Development/dog-face-development.github.io?include_prereleases">
-  <!-- Issues -->
-  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Dog-Face-Development/dog-face-development.github.io">
-  <!-- Pull Requests -->
-  <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Dog-Face-Development/dog-face-development.github.io">
-  <!-- Discord -->
-  <img alt="Discord Server ID" src="https://img.shields.io/discord/1016481578093920377">
-  <!-- Language Count -->
-  <img alt="GitHub Languages" src="https://img.shields.io/github/languages/count/Dog-Face-Development/dog-face-development.github.io">
-</div>
 
-<!-- Navigation -->
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#credits">Credits & Contributors</a>
-</p>
+![GitHub contributors](https://img.shields.io/github/contributors/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=blue)
+![GitHub Closed issues](https://img.shields.io/github/issues-closed-raw/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=brightgreen)
+![GitHub PR Open](https://img.shields.io/github/issues-pr/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=aqua)
+![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=blue)
+![GitHub language count](https://img.shields.io/github/languages/count/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=brightgreen)
+![GitHub top language](https://img.shields.io/github/languages/top/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=aqua)
+![GitHub last commit](https://img.shields.io/github/last-commit/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=blue)
+![Github Repo Size](https://img.shields.io/github/repo-size/Dog-Face-Development/dog-face-development.github.io?style=for-the-badge&color=aqua)
+
+
+
+<br>
 
 ## Key Features
 
@@ -46,46 +30,12 @@
 * Uses Font Awesome icons.
 * Cross platform, web browser based.
 
-## How To Use
 
-**To access the latest version of the website visit it at [https://dog-face-development.github.io](https://dog-face-development.github.io).**
-
-**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/Dog-Face-Development/dog-face-development.github.io.git
-
-# Go into the repository
-$ cd dog-face-development.github.io
-
-# Run the webpage
-$ index.html
-```
-
-You can also pull the [Docker](https://www.docker.com/) image from GitHub Packages. From your command line:
-
-```bash
-# Pull image
-$ docker pull docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
-
-# Run container
-$ docker run -d -p 8000:80 docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
-
-# Now, navigate to localhost in your browser to see the webpage
-```
-
-If support is required, please open a **[GitHub Discussion](https://github.com/Dog-Face-Development/dog-face-development.github.io/discussions)** or join our **[Discord](https://discord.gg/yv2FGFVpNc)**.
-
-## Contributing
-
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Dog-Face-Development/dog-face-development.github.io/compare).
-
-Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us (including how to sign our CLA).
+<br>
 
 ## Credits
 
-This software uses the following open source packages, projects, services or websites:
+This software uses the following open source packages 
 
 <!-- Credits Table -->
 <table>
@@ -111,16 +61,24 @@ This software uses the following open source packages, projects, services or web
     <td align="center"><a href="https://simpleanalytics.com/?referral=willtheorangeguy">Web</a> - <a href="https://www.simpleanalytics.com/pricing">Plans</a></td>
 </table>
 
-## Contributors
+<br>
 
-* [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
-* [@BinukaDs](https://github.com/BinukaDs)
 
 ## You may also like...
 
 * [ProgramVer](https://github.com/Dog-Face-Development/ProgramVer) - An open-source, Python GUI version window to show copyright info and licenses.
 * [PyWorkout](https://github.com/Dog-Face-Development/PyWorkout) - A minimal CLI to keep you inspired during your workout!
 * [PyAvatar](https://github.com/Dog-Face-Development/PyAvatar) - Easily display all of your creative avatars to keep them consistent across websites.
+
+<br>
+
+## Contributors 
+
+<a href="https://github.com/Dog-Face-Development/dog-face-development.github.io/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dog-Face-Development/dog-face-development.github.io" />
+</a>
+
+<br>
 
 ## License
 

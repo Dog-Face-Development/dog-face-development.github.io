@@ -4,6 +4,31 @@
 
 The following is a set of guidelines for contributing to Dog Face Development Co.'s Website on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
+## START FROM HERE 
+
+**To clone and run your own copy of this website**, you'll need [Git](https://git-scm.com/downloads) installed on your computer. If you would rather not use Git, you can just download the code from GitHub above. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/Dog-Face-Development/dog-face-development.github.io.git
+
+# Go into the repository
+$ cd dog-face-development.github.io
+
+# Run the webpage
+$ index.html
+```
+
+You can also pull the [Docker](https://www.docker.com/) image from GitHub Packages. From your command line:
+
+```bash
+# Pull image
+$ docker pull docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
+
+# Run container
+$ docker run -d -p 8000:80 docker pull ghcr.io/dog-face-development/dog-face-development.github.io:master
+
+# Now, navigate to localhost in your browser to see the webpage
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to our [Discord](https://discord.gg/yv2FGFVpNc).
