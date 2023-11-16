@@ -35,9 +35,6 @@ var defaultOptions = {
     excluded          : ""    
 };
 
-var options = defaultOptions;
-
-
 // Other Variables
 var isExcluded = false;
 var isFrame = false;
@@ -45,7 +42,6 @@ var direction = { x: 0, y: 0 };
 var initDone  = false;
 var root = document.documentElement;
 var activeElement;
-var observer;
 var deltaBuffer = [ 120, 120, 120 ];
 
 var key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, 
