@@ -8,13 +8,13 @@ if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
 
-+function ($) {
++(function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')
   if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1)) {
     throw new Error('Bootstrap\'s JavaScript requires jQuery version 1.9.1 or higher')
   }
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: transition.js v3.3.2
@@ -25,7 +25,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
@@ -74,7 +74,7 @@ if (typeof jQuery === 'undefined') {
     }
   })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: alert.js v3.3.2
@@ -85,7 +85,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // ALERT CLASS DEFINITION
@@ -169,7 +169,7 @@ if (typeof jQuery === 'undefined') {
 
   $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: button.js v3.3.2
@@ -180,7 +180,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // BUTTON PUBLIC CLASS DEFINITION
@@ -286,7 +286,7 @@ if (typeof jQuery === 'undefined') {
       $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
     })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: carousel.js v3.3.2
@@ -297,7 +297,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // CAROUSEL CLASS DEFINITION
@@ -524,7 +524,7 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: collapse.js v3.3.2
@@ -535,7 +535,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // COLLAPSE PUBLIC CLASS DEFINITION
@@ -736,7 +736,7 @@ if (typeof jQuery === 'undefined') {
     Plugin.call($target, option)
   })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: dropdown.js v3.3.2
@@ -747,7 +747,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // DROPDOWN CLASS DEFINITION
@@ -898,7 +898,7 @@ if (typeof jQuery === 'undefined') {
     .on('keydown.bs.dropdown.data-api', '[role="menu"]', Dropdown.prototype.keydown)
     .on('keydown.bs.dropdown.data-api', '[role="listbox"]', Dropdown.prototype.keydown)
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: modal.js v3.3.2
@@ -909,7 +909,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // MODAL CLASS DEFINITION
@@ -1223,7 +1223,7 @@ if (typeof jQuery === 'undefined') {
     Plugin.call($target, option, this)
   })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.2
@@ -1235,7 +1235,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // TOOLTIP PUBLIC CLASS DEFINITION
@@ -1696,7 +1696,7 @@ if (typeof jQuery === 'undefined') {
     return this
   }
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: popover.js v3.3.2
@@ -1707,7 +1707,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // POPOVER PUBLIC CLASS DEFINITION
@@ -1810,7 +1810,7 @@ if (typeof jQuery === 'undefined') {
     return this
   }
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: scrollspy.js v3.3.2
@@ -1821,7 +1821,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // SCROLLSPY CLASS DEFINITION
@@ -1986,7 +1986,7 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: tab.js v3.3.2
@@ -1997,7 +1997,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // TAB CLASS DEFINITION
@@ -2140,7 +2140,7 @@ if (typeof jQuery === 'undefined') {
     .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
-}(jQuery);
+}(jQuery));
 
 /* ========================================================================
  * Bootstrap: affix.js v3.3.2
@@ -2151,7 +2151,7 @@ if (typeof jQuery === 'undefined') {
  * ======================================================================== */
 
 
-+function ($) {
++(function ($) {
   'use strict';
 
   // AFFIX CLASS DEFINITION
@@ -2303,4 +2303,4 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
-}(jQuery);
+}(jQuery));
