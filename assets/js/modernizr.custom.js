@@ -334,7 +334,7 @@
             var e = b.getElementById("smodernizr"),
               f = e.sheet || e.styleSheet,
               g = f
-                ? f.cssRules && f.cssRules[0]
+                ? f.cssRules?.[0]
                   ? f.cssRules[0].cssText
                   : f.cssText || ""
                 : "";
@@ -430,7 +430,7 @@
       var a = b.createElement("div");
       return (
         (a.innerHTML = "<svg/>"),
-        (a.firstChild && a.firstChild.namespaceURI) == r.svg
+        (a.firstChild?.namespaceURI) == r.svg
       );
     }),
     (s.smil = function () {
@@ -756,8 +756,8 @@
                 (d(e) || d(j)) &&
                   f.load(function () {
                     k(),
-                      e && e(i.origUrl, h, g),
-                      j && j(i.origUrl, h, g),
+                      e?.(i.origUrl, h, g),
+                      j?.(i.origUrl, h, g),
                       (y[i.url] = 2);
                   })));
       }
@@ -790,7 +790,7 @@
                       : (j[n] = (function (a) {
                           return function () {
                             var b = [].slice.call(arguments);
-                            a && a.apply(this, b), l();
+                            a?.apply(this, b), l();
                           };
                         })(k[n]))),
                   g(a[n], j, b, n, h));
