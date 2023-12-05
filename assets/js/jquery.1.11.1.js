@@ -194,7 +194,7 @@
         return a;
       },
       trim: function (a) {
-        return null == a ? "" : (String(a)).replace(n, "");
+        return null == a ? "" : String(a).replace(n, "");
       },
       makeArray: function (a, b) {
         var c = b || [];
@@ -862,9 +862,11 @@
                 (a[1] = a[1].toLowerCase()),
                 "nth" === a[1].slice(0, 3)
                   ? (a[3] || fb.error(a[0]),
-                    (a[4] = Number(a[4]
-                      ? a[5] + (a[6] || 1)
-                      : 2 * ("even" === a[3] || "odd" === a[3]))),
+                    (a[4] = Number(
+                      a[4]
+                        ? a[5] + (a[6] || 1)
+                        : 2 * ("even" === a[3] || "odd" === a[3]),
+                    )),
                     (a[5] = Number(a[7] + a[8] || "odd" === a[3])))
                   : a[3] && fb.error(a[0]),
                 a
@@ -1559,8 +1561,10 @@
         return this.pushStack(w(this, a || [], !0));
       },
       is: function (a) {
-        return Boolean(w(this, "string" == typeof a && t.test(a) ? m(a) : a || [], !1)
-          .length);
+        return Boolean(
+          w(this, "string" == typeof a && t.test(a) ? m(a) : a || [], !1)
+            .length,
+        );
       },
     });
   var x,
@@ -2134,7 +2138,8 @@
     },
     hasData: function (a) {
       return (
-        (a = a.nodeType ? m.cache[a[m.expando]] : a[m.expando]), Boolean(a) && !P(a)
+        (a = a.nodeType ? m.cache[a[m.expando]] : a[m.expando]),
+        Boolean(a) && !P(a)
       );
     },
     data: function (a, b, c) {
@@ -5094,7 +5099,7 @@
         ((o.promise(v).complete = p.add),
         (v.success = v.done),
         (v.error = v.fail),
-        (k.url = (String(a || k.url || zc))
+        (k.url = String(a || k.url || zc)
           .replace(Ac, "")
           .replace(Fc, yc[1] + "//")),
         (k.type = b.method || b.type || k.method || k.type),
@@ -5407,7 +5412,8 @@
                 a.crossDomain ||
                   c["X-Requested-With"] ||
                   (c["X-Requested-With"] = "XMLHttpRequest");
-              for (e in c) void 0 !== c[e] && f.setRequestHeader(e, String(c[e]));
+              for (e in c)
+                void 0 !== c[e] && f.setRequestHeader(e, String(c[e]));
               f.send((a.hasContent && a.data) || null),
                 (b = function (c, e) {
                   var h, i, j;

@@ -12,7 +12,7 @@
     return typeof a === b;
   }
   function F(a, b) {
-    return Boolean(~(String(a)).indexOf(b));
+    return Boolean(~String(a).indexOf(b));
   }
   function G(a, b) {
     for (var d in a) {
@@ -41,7 +41,9 @@
       for (var d = 0, e = c.length; d < e; d++) u[c[d]] = c[d] in k;
       return (
         u.list &&
-          (u.list = Boolean(b.createElement("datalist")) && Boolean(a.HTMLDataListElement)),
+          (u.list =
+            Boolean(b.createElement("datalist")) &&
+            Boolean(a.HTMLDataListElement)),
         u
       );
     })(
@@ -196,7 +198,9 @@
     (s.canvastext = function () {
       return (
         Boolean(e.canvas) &&
-        Boolean(E(b.createElement("canvas").getContext("2d").fillText, "function"))
+        Boolean(
+          E(b.createElement("canvas").getContext("2d").fillText, "function"),
+        )
       );
     }),
     (s.webgl = function () {
@@ -423,7 +427,8 @@
     }),
     (s.svg = function () {
       return (
-        Boolean(b.createElementNS) && Boolean(b.createElementNS(r.svg, "svg").createSVGRect)
+        Boolean(b.createElementNS) &&
+        Boolean(b.createElementNS(r.svg, "svg").createSVGRect)
       );
     }),
     (s.inlinesvg = function () {
@@ -538,10 +543,12 @@
           s.shivCSS &&
             !g &&
             !c.hasCSS &&
-            (c.hasCSS = Boolean(l(
-              a,
-              "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}",
-            ))),
+            (c.hasCSS = Boolean(
+              l(
+                a,
+                "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}",
+              ),
+            )),
           k || q(a, c),
           a
         );
