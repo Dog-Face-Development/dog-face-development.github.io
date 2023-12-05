@@ -70,7 +70,7 @@
       },
       eq: function (a) {
         var b = this.length,
-          c = +a + (0 > a ? b : 0);
+          c = Number(a) + (0 > a ? b : 0);
         return this.pushStack(c >= 0 && b > c ? [this[c]] : []);
       },
       end: function () {
@@ -158,7 +158,7 @@
       },
       type: function (a) {
         return null == a
-          ? a + ""
+          ? String(a)
           : "object" == typeof a || "function" == typeof a
             ? h[i.call(a)] || "object"
             : typeof a;
@@ -194,7 +194,7 @@
         return a;
       },
       trim: function (a) {
-        return null == a ? "" : (a + "").replace(n, "");
+        return null == a ? "" : (String(a)).replace(n, "");
       },
       makeArray: function (a, b) {
         var c = b || [];
@@ -220,7 +220,7 @@
         return -1;
       },
       merge: function (a, b) {
-        var c = +b.length,
+        var c = Number(b.length),
           d = 0,
           e = a.length;
         while (c > d) a[e++] = b[d++];
@@ -258,7 +258,7 @@
         );
       },
       now: function () {
-        return +new Date();
+        return Number(new Date());
       },
       support: k,
     }),
@@ -494,7 +494,7 @@
     function ib(a) {
       var b = n.createElement("div");
       try {
-        return !!a(b);
+        return Boolean(a(b));
       } catch (c) {
         return !1;
       } finally {
@@ -532,7 +532,7 @@
     function nb(a) {
       return hb(function (b) {
         return (
-          (b = +b),
+          (b = Number(b)),
           hb(function (c, d) {
             var e,
               f = a([], c.length, b),
@@ -862,10 +862,10 @@
                 (a[1] = a[1].toLowerCase()),
                 "nth" === a[1].slice(0, 3)
                   ? (a[3] || fb.error(a[0]),
-                    (a[4] = +(a[4]
+                    (a[4] = Number(a[4]
                       ? a[5] + (a[6] || 1)
                       : 2 * ("even" === a[3] || "odd" === a[3]))),
-                    (a[5] = +(a[7] + a[8] || "odd" === a[3])))
+                    (a[5] = Number(a[7] + a[8] || "odd" === a[3])))
                   : a[3] && fb.error(a[0]),
                 a
               );
@@ -917,7 +917,7 @@
                 return null == e
                   ? "!=" === b
                   : b
-                    ? ((e += ""),
+                    ? ((e = String(e)),
                       "=" === b
                         ? e === c
                         : "!=" === b
@@ -943,7 +943,7 @@
                 h = "of-type" === b;
               return 1 === d && 0 === e
                 ? function (a) {
-                    return !!a.parentNode;
+                    return Boolean(a.parentNode);
                   }
                 : function (b, c, i) {
                     var j,
@@ -1088,7 +1088,7 @@
               return (
                 a === n.activeElement &&
                 (!n.hasFocus || n.hasFocus()) &&
-                !!(a.type || a.href || ~a.tabIndex)
+                Boolean(a.type || a.href || ~a.tabIndex)
               );
             },
             enabled: function (a) {
@@ -1100,8 +1100,8 @@
             checked: function (a) {
               var b = a.nodeName.toLowerCase();
               return (
-                ("input" === b && !!a.checked) ||
-                ("option" === b && !!a.selected)
+                ("input" === b && Boolean(a.checked)) ||
+                ("option" === b && Boolean(a.selected))
               );
             },
             selected: function (a) {
@@ -1445,7 +1445,7 @@
           );
         }),
       (c.sortStable = u.split("").sort(B).join("") === u),
-      (c.detectDuplicates = !!l),
+      (c.detectDuplicates = Boolean(l)),
       m(),
       (c.sortDetached = ib(function (a) {
         return 1 & a.compareDocumentPosition(n.createElement("div"));
@@ -1503,7 +1503,7 @@
   function w(a, b, c) {
     if (m.isFunction(b))
       return m.grep(a, function (a, d) {
-        return !!b.call(a, d, a) !== c;
+        return Boolean(b.call(a, d, a)) !== c;
       });
     if (b.nodeType)
       return m.grep(a, function (a) {
@@ -1559,8 +1559,8 @@
         return this.pushStack(w(this, a || [], !0));
       },
       is: function (a) {
-        return !!w(this, "string" == typeof a && t.test(a) ? m(a) : a || [], !1)
-          .length;
+        return Boolean(w(this, "string" == typeof a && t.test(a) ? m(a) : a || [], !1)
+          .length);
       },
     });
   var x,
@@ -1834,7 +1834,7 @@
           return k.fireWith(this, arguments), this;
         },
         fired: function () {
-          return !!d;
+          return Boolean(d);
         },
       };
     return k;
@@ -2032,7 +2032,7 @@
     })(),
     (m.acceptData = function (a) {
       var b = m.noData[(a.nodeName + " ").toLowerCase()],
-        c = +a.nodeType || 1;
+        c = Number(a.nodeType) || 1;
       return 1 !== c && 9 !== c
         ? !1
         : !b || (b !== !0 && a.getAttribute("classid") === b);
@@ -2051,8 +2051,8 @@
                 ? !1
                 : "null" === c
                   ? null
-                  : +c + "" === c
-                    ? +c
+                  : String(Number(c)) === c
+                    ? Number(c)
                     : M.test(c)
                       ? m.parseJSON(c)
                       : c;
@@ -2134,7 +2134,7 @@
     },
     hasData: function (a) {
       return (
-        (a = a.nodeType ? m.cache[a[m.expando]] : a[m.expando]), !!a && !P(a)
+        (a = a.nodeType ? m.cache[a[m.expando]] : a[m.expando]), Boolean(a) && !P(a)
       );
     },
     data: function (a, b, c) {
@@ -2312,7 +2312,7 @@
         "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>"),
       (k.leadingWhitespace = 3 === b.firstChild.nodeType),
       (k.tbody = !b.getElementsByTagName("tbody").length),
-      (k.htmlSerialize = !!b.getElementsByTagName("link").length),
+      (k.htmlSerialize = Boolean(b.getElementsByTagName("link").length)),
       (k.html5Clone =
         "<:nav></:nav>" !== y.createElement("nav").cloneNode(!0).outerHTML),
       (a.type = "checkbox"),
@@ -2320,7 +2320,7 @@
       c.appendChild(a),
       (k.appendChecked = a.checked),
       (b.innerHTML = "<textarea>x</textarea>"),
-      (k.noCloneChecked = !!b.cloneNode(!0).lastChild.defaultValue),
+      (k.noCloneChecked = Boolean(b.cloneNode(!0).lastChild.defaultValue)),
       c.appendChild(b),
       (b.innerHTML = "<input type='radio' checked='checked' name='t'/>"),
       (k.checkClone = b.cloneNode(!0).cloneNode(!0).lastChild.checked),
@@ -2623,7 +2623,7 @@
       return (
         a.target || (a.target = f.srcElement || y),
         3 === a.target.nodeType && (a.target = a.target.parentNode),
-        (a.metaKey = !!a.metaKey),
+        (a.metaKey = Boolean(a.metaKey)),
         g.filter ? g.filter(a, f) : a
       );
     },
@@ -3476,7 +3476,7 @@
               (h.width = d),
               (h.minWidth = e),
               (h.maxWidth = f))),
-          void 0 === g ? g : g + ""
+          void 0 === g ? g : String(g)
         );
       }))
     : y.documentElement.currentStyle &&
@@ -3503,7 +3503,7 @@
             (g = h.pixelLeft + "px"),
             (h.left = d),
             f && (e.left = f)),
-          void 0 === g ? g : g + "" || "auto"
+          void 0 === g ? g : String(g) || "auto"
         );
       }));
   function Lb(a, b) {
@@ -3528,7 +3528,7 @@
     ) {
       (c.cssText = "float:left;opacity:.5"),
         (k.opacity = "0.5" === c.opacity),
-        (k.cssFloat = !!c.cssFloat),
+        (k.cssFloat = Boolean(c.cssFloat)),
         (b.style.backgroundClip = "content-box"),
         (b.cloneNode(!0).style.backgroundClip = ""),
         (k.clearCloneStyle = "content-box" === b.style.backgroundClip),
@@ -3783,7 +3783,7 @@
             (b && a.currentStyle ? a.currentStyle.filter : a.style.filter) ||
               "",
           )
-            ? 0.01 * parseFloat(RegExp.$1) + ""
+            ? String(0.01 * parseFloat(RegExp.$1))
             : b
               ? "1"
               : "";
@@ -3948,20 +3948,20 @@
             e = bc.exec(b),
             f = (e && e[3]) || (m.cssNumber[a] ? "" : "px"),
             g =
-              (m.cssNumber[a] || ("px" !== f && +d)) &&
+              (m.cssNumber[a] || ("px" !== f && Number(d))) &&
               bc.exec(m.css(c.elem, a)),
             h = 1,
             i = 20;
           if (g && g[3] !== f) {
-            (f = f || g[3]), (e = e || []), (g = +d || 1);
+            (f = f || g[3]), (e = e || []), (g = Number(d) || 1);
             do (h = h || ".5"), (g /= h), m.style(c.elem, a, g + f);
             while (h !== (h = c.cur() / d) && 1 !== h && --i);
           }
           return (
             e &&
-              ((g = c.start = +g || +d || 0),
+              ((g = c.start = Number(g) || Number(d) || 0),
               (c.unit = f),
-              (c.end = e[1] ? g + (e[1] + 1) * e[2] : +e[2])),
+              (c.end = e[1] ? g + (e[1] + 1) * e[2] : Number(e[2]))),
             c
           );
         },
@@ -4330,9 +4330,9 @@
         (k.getSetAttribute = "t" !== b.className),
         (k.style = /top/.test(d.getAttribute("style"))),
         (k.hrefNormalized = "/a" === d.getAttribute("href")),
-        (k.checkOn = !!a.value),
+        (k.checkOn = Boolean(a.value)),
         (k.optSelected = e.selected),
-        (k.enctype = !!y.createElement("form").enctype),
+        (k.enctype = Boolean(y.createElement("form").enctype)),
         (c.disabled = !0),
         (k.optDisabled = !e.disabled),
         (a = y.createElement("input")),
@@ -4360,10 +4360,10 @@
                 null == e
                   ? (e = "")
                   : "number" == typeof e
-                    ? (e += "")
+                    ? (e = String(e))
                     : m.isArray(e) &&
                       (e = m.map(e, function (a) {
-                        return null == a ? "" : a + "";
+                        return null == a ? "" : String(a);
                       })),
                 (b =
                   m.valHooks[this.type] ||
@@ -4487,7 +4487,7 @@
                 : null !== c
                   ? d && "set" in d && void 0 !== (e = d.set(a, c, b))
                     ? e
-                    : (a.setAttribute(b, c + ""), c)
+                    : (a.setAttribute(b, String(c)), c)
                   : void m.removeAttr(a, b));
       },
       removeAttr: function (a, b) {
@@ -4565,7 +4565,7 @@
           var d = a.getAttributeNode(c);
           return (
             d || a.setAttributeNode((d = a.ownerDocument.createAttribute(c))),
-            (d.value = b += ""),
+            (d.value = b = String(b)),
             "value" === c || b === a.getAttribute(c) ? b : void 0
           );
         },
@@ -4606,7 +4606,7 @@
           return a.style.cssText || void 0;
         },
         set: function (a, b) {
-          return (a.style.cssText = b + "");
+          return (a.style.cssText = String(b));
         },
       });
   var sc = /^(?:input|select|textarea|button|object)$/i,
@@ -4831,10 +4831,10 @@
     xc =
       /(,)|(\[|{)|(}|])|"(?:[^"\\\r\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]{4})*"\s*:?|true|false|null|-?(?!0\d)\d+(?:\.\d+|)(?:[eE][+-]?\d+|)/g;
   (m.parseJSON = function (b) {
-    if (a.JSON && a.JSON.parse) return a.JSON.parse(b + "");
+    if (a.JSON && a.JSON.parse) return a.JSON.parse(String(b));
     var c,
       d = null,
-      e = m.trim(b + "");
+      e = m.trim(String(b));
     return e &&
       !m.trim(
         e.replace(xc, function (a, b, e, f) {
@@ -5094,7 +5094,7 @@
         ((o.promise(v).complete = p.add),
         (v.success = v.done),
         (v.error = v.fail),
-        (k.url = ((a || k.url || zc) + "")
+        (k.url = (String(a || k.url || zc))
           .replace(Ac, "")
           .replace(Fc, yc[1] + "//")),
         (k.type = b.method || b.type || k.method || k.type),
@@ -5193,7 +5193,7 @@
                   : ((x = u.state), (r = u.data), (s = u.error), (j = !s)))
             : ((s = x), (a || !x) && ((x = "error"), 0 > a && (a = 0))),
           (v.status = a),
-          (v.statusText = (b || x) + ""),
+          (v.statusText = String(b || x)),
           j ? o.resolveWith(l, [r, x, v]) : o.rejectWith(l, [v, x, s]),
           v.statusCode(q),
           (q = void 0),
@@ -5385,8 +5385,8 @@
     m(a).on("unload", function () {
       for (var a in Xc) Xc[a](void 0, !0);
     }),
-    (k.cors = !!Yc && "withCredentials" in Yc),
-    (Yc = k.ajax = !!Yc),
+    (k.cors = Boolean(Yc) && "withCredentials" in Yc),
+    (Yc = k.ajax = Boolean(Yc)),
     Yc &&
       m.ajaxTransport(function (a) {
         if (!a.crossDomain || k.cors) {
@@ -5407,7 +5407,7 @@
                 a.crossDomain ||
                   c["X-Requested-With"] ||
                   (c["X-Requested-With"] = "XMLHttpRequest");
-              for (e in c) void 0 !== c[e] && f.setRequestHeader(e, c[e] + "");
+              for (e in c) void 0 !== c[e] && f.setRequestHeader(e, String(c[e]));
               f.send((a.hasContent && a.data) || null),
                 (b = function (c, e) {
                   var h, i, j;

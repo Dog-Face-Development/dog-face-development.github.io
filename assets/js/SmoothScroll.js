@@ -134,7 +134,7 @@
 
   var que = [];
   var pending = false;
-  var lastScroll = +new Date();
+  var lastScroll = Number(new Date());
 
   /**
    * Pushes scroll actions to the scrolling queue.
@@ -144,7 +144,7 @@
     directionCheck(left, top);
 
     if (options.accelerationMax != 1) {
-      var now = +new Date();
+      var now = Number(new Date());
       var elapsed = now - lastScroll;
       if (elapsed < options.accelerationDelta) {
         var factor = (1 + 30 / elapsed) / 2;
@@ -154,7 +154,7 @@
           top *= factor;
         }
       }
-      lastScroll = +new Date();
+      lastScroll = Number(new Date());
     }
 
     // push a scroll command
@@ -163,7 +163,7 @@
       y: top,
       lastX: left < 0 ? 0.99 : -0.99,
       lastY: top < 0 ? 0.99 : -0.99,
-      start: +new Date(),
+      start: Number(new Date()),
     });
 
     // don't act if there's a pending queue
@@ -174,7 +174,7 @@
     var scrollWindow = elem === document.body;
 
     var step = function (time) {
-      var now = +new Date();
+      var now = Number(new Date());
       var scrollX = 0;
       var scrollY = 0;
 
