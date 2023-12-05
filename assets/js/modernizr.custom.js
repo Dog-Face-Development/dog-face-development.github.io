@@ -12,7 +12,7 @@
     return typeof a === b;
   }
   function F(a, b) {
-    return !!~("" + a).indexOf(b);
+    return Boolean(~(String(a)).indexOf(b));
   }
   function G(a, b) {
     for (var d in a) {
@@ -41,7 +41,7 @@
       for (var d = 0, e = c.length; d < e; d++) u[c[d]] = c[d] in k;
       return (
         u.list &&
-          (u.list = !!b.createElement("datalist") && !!a.HTMLDataListElement),
+          (u.list = Boolean(b.createElement("datalist")) && Boolean(a.HTMLDataListElement)),
         u
       );
     })(
@@ -69,7 +69,7 @@
                   (/^(url|email)$/.test(f)
                     ? (e = k.checkValidity && k.checkValidity() === !1)
                     : (e = k.value != l))),
-            (t[a[d]] = !!e);
+            (t[a[d]] = Boolean(e));
         return t;
       })(
         "search tel url email datetime date month week time datetime-local number range color".split(
@@ -126,7 +126,7 @@
         m
           ? l.parentNode.removeChild(l)
           : (n.parentNode.removeChild(n), (g.style.overflow = k)),
-        !!i
+        Boolean(i)
       );
     },
     z = (function () {
@@ -191,16 +191,16 @@
     }),
     (s.canvas = function () {
       var a = b.createElement("canvas");
-      return !!a.getContext && !!a.getContext("2d");
+      return Boolean(a.getContext) && Boolean(a.getContext("2d"));
     }),
     (s.canvastext = function () {
       return (
-        !!e.canvas &&
-        !!E(b.createElement("canvas").getContext("2d").fillText, "function")
+        Boolean(e.canvas) &&
+        Boolean(E(b.createElement("canvas").getContext("2d").fillText, "function"))
       );
     }),
     (s.webgl = function () {
-      return !!a.WebGLRenderingContext;
+      return Boolean(a.WebGLRenderingContext);
     }),
     (s.touch = function () {
       var c;
@@ -226,19 +226,19 @@
       return "geolocation" in navigator;
     }),
     (s.postmessage = function () {
-      return !!a.postMessage;
+      return Boolean(a.postMessage);
     }),
     (s.websqldatabase = function () {
-      return !!a.openDatabase;
+      return Boolean(a.openDatabase);
     }),
     (s.indexedDB = function () {
-      return !!I("indexedDB", a);
+      return Boolean(I("indexedDB", a));
     }),
     (s.hashchange = function () {
       return z("hashchange", a) && (b.documentMode === c || b.documentMode > 7);
     }),
     (s.history = function () {
-      return !!a.history && !!history.pushState;
+      return Boolean(a.history) && Boolean(history.pushState);
     }),
     (s.draganddrop = function () {
       var a = b.createElement("div");
@@ -306,10 +306,10 @@
       return I("boxReflect");
     }),
     (s.csstransforms = function () {
-      return !!I("transform");
+      return Boolean(I("transform"));
     }),
     (s.csstransforms3d = function () {
-      var a = !!I("perspective");
+      var a = Boolean(I("perspective"));
       return (
         a &&
           "webkitPerspective" in g.style &&
@@ -368,7 +368,7 @@
       var a = b.createElement("video"),
         c = !1;
       try {
-        if ((c = !!a.canPlayType))
+        if ((c = Boolean(a.canPlayType)))
           (c = new Boolean(c)),
             (c.ogg = a
               .canPlayType('video/ogg; codecs="theora"')
@@ -386,7 +386,7 @@
       var a = b.createElement("audio"),
         c = !1;
       try {
-        if ((c = !!a.canPlayType))
+        if ((c = Boolean(a.canPlayType)))
           (c = new Boolean(c)),
             (c.ogg = a
               .canPlayType('audio/ogg; codecs="vorbis"')
@@ -416,14 +416,14 @@
       }
     }),
     (s.webworkers = function () {
-      return !!a.Worker;
+      return Boolean(a.Worker);
     }),
     (s.applicationcache = function () {
-      return !!a.applicationCache;
+      return Boolean(a.applicationCache);
     }),
     (s.svg = function () {
       return (
-        !!b.createElementNS && !!b.createElementNS(r.svg, "svg").createSVGRect
+        Boolean(b.createElementNS) && Boolean(b.createElementNS(r.svg, "svg").createSVGRect)
       );
     }),
     (s.inlinesvg = function () {
@@ -435,13 +435,13 @@
     }),
     (s.smil = function () {
       return (
-        !!b.createElementNS &&
+        Boolean(b.createElementNS) &&
         /SVGAnimate/.test(m.call(b.createElementNS(r.svg, "animate")))
       );
     }),
     (s.svgclippaths = function () {
       return (
-        !!b.createElementNS &&
+        Boolean(b.createElementNS) &&
         /SVGClipPath/.test(m.call(b.createElementNS(r.svg, "clipPath")))
       );
     });
@@ -538,10 +538,10 @@
           s.shivCSS &&
             !g &&
             !c.hasCSS &&
-            (c.hasCSS = !!l(
+            (c.hasCSS = Boolean(l(
               a,
               "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}",
-            )),
+            ))),
           k || q(a, c),
           a
         );
@@ -695,10 +695,10 @@
       p = [],
       q = 0,
       r = "MozAppearance" in l.style,
-      s = r && !!b.createRange().compareNode,
+      s = r && Boolean(b.createRange().compareNode),
       t = s ? l : n.parentNode,
       l = a.opera && "[object Opera]" == o.call(a.opera),
-      l = !!b.attachEvent && !l,
+      l = Boolean(b.attachEvent) && !l,
       u = r ? "object" : l ? "script" : "img",
       v = l ? "script" : u,
       w =
@@ -796,14 +796,14 @@
                   g(a[n], j, b, n, h));
           } else !c && l();
         }
-        var h = !!a.test,
+        var h = Boolean(a.test),
           i = a.load || a.both,
           j = a.callback || f,
           k = j,
           l = a.complete || f,
           m,
           n;
-        c(h ? a.yep : a.nope, !!i), i && c(i);
+        c(h ? a.yep : a.nope, Boolean(i)), i && c(i);
       }
       var i,
         j,

@@ -106,7 +106,7 @@ var outdatedBrowser = function (options) {
   })();
 
   //if browser does not supports css3 property (transform=default), if does > exit all this
-  if (!supports("" + cssProp + "")) {
+  if (!supports(String(cssProp) + "")) {
     if (done && outdated.style.opacity !== "1") {
       done = false;
       for (var i = 1; i <= 100; i++) {
