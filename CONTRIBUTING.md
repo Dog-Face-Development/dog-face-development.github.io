@@ -54,7 +54,7 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 ### Do you have questions about the source code?
 
 - Ask any question about how to use the Style Guides on our [Discord](https://discord.gg/yv2FGFVpNc).
-- If it does not get answered, open an [issue](https://github.com/Dog-Face-Development/dog-face-development.github.io/issues/new/choose).  
+- If it does not get answered, open an [issue](https://github.com/Dog-Face-Development/dog-face-development.github.io/issues/new/choose).
 
 ## Coding Conventions
 

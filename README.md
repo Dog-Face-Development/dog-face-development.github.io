@@ -38,13 +38,13 @@
 
 ## Key Features
 
-* Modern web style.
-* Includes a projects section with links to GitHub.
-* Includes an "About" page.
-* Includes a "Contact" page.
-* Conforms to a Web Style Guide.
-* Uses Font Awesome icons.
-* Cross platform, web browser based.
+- Modern web style.
+- Includes a projects section with links to GitHub.
+- Includes an "About" page.
+- Includes a "Contact" page.
+- Conforms to a Web Style Guide.
+- Uses Font Awesome icons.
+- Cross platform, web browser based.
 
 ## How To Use
 
@@ -113,14 +113,14 @@ This software uses the following open source packages, projects, services or web
 
 ## Contributors
 
-* [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
-* [@BinukaDs](https://github.com/BinukaDs)
+- [@willtheorangeguy](https://github.com/willtheorangeguy) - Sponsor on [PayPal](https://paypal.me/wvdg44?country.x=CA&locale.x=en_US)
+- [@BinukaDs](https://github.com/BinukaDs)
 
 ## You may also like...
 
-* [ProgramVer](https://github.com/Dog-Face-Development/ProgramVer) - An open-source, Python GUI version window to show copyright info and licenses.
-* [PyWorkout](https://github.com/Dog-Face-Development/PyWorkout) - A minimal CLI to keep you inspired during your workout!
-* [PyAvatar](https://github.com/Dog-Face-Development/PyAvatar) - Easily display all of your creative avatars to keep them consistent across websites.
+- [ProgramVer](https://github.com/Dog-Face-Development/ProgramVer) - An open-source, Python GUI version window to show copyright info and licenses.
+- [PyWorkout](https://github.com/Dog-Face-Development/PyWorkout) - A minimal CLI to keep you inspired during your workout!
+- [PyAvatar](https://github.com/Dog-Face-Development/PyAvatar) - Easily display all of your creative avatars to keep them consistent across websites.
 
 ## License
 

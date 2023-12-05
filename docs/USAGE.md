@@ -3,6 +3,7 @@
 To run the dog-face-development.github.io website, you can run the scripts from GitHub, or run a [Docker](https://www.docker.com/) container from [GitHub Packages](https://github.com/Dog-Face-Development/dog-face-development.github.io/pkgs/container/dog-face-development.github.io).
 
 ## GitHub Scripts
+
 1. To run the dog-face-development.github.io website, download the latest `.zip` file from [GitHub Releases](https://github.com/Dog-Face-Development/dog-face-development.github.io/releases/latest) page.
 2. Extract the `.zip` file using a program like [7-Zip](https://www.7-zip.org/).
 3. Run the `index.html` file.
