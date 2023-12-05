@@ -12,7 +12,7 @@
     return typeof a === b;
   }
   function F(a, b) {
-    return Boolean(~(String(a)).indexOf(b));
+    return Boolean(~String(a).indexOf(b));
   }
   function G(a, b) {
     for (var d in a) {
@@ -41,7 +41,9 @@
       for (var d = 0, e = c.length; d < e; d++) u[c[d]] = c[d] in k;
       return (
         u.list &&
-          (u.list = Boolean(b.createElement("datalist")) && Boolean(a.HTMLDataListElement)),
+          (u.list =
+            Boolean(b.createElement("datalist")) &&
+            Boolean(a.HTMLDataListElement)),
         u
       );
     })(
@@ -196,7 +198,9 @@
     (s.canvastext = function () {
       return (
         Boolean(e.canvas) &&
-        Boolean(E(b.createElement("canvas").getContext("2d").fillText, "function"))
+        Boolean(
+          E(b.createElement("canvas").getContext("2d").fillText, "function"),
+        )
       );
     }),
     (s.webgl = function () {
@@ -334,7 +338,7 @@
             var e = b.getElementById("smodernizr"),
               f = e.sheet || e.styleSheet,
               g = f
-                ? f.cssRules && f.cssRules[0]
+                ? f.cssRules?.[0]
                   ? f.cssRules[0].cssText
                   : f.cssText || ""
                 : "";
@@ -423,15 +427,13 @@
     }),
     (s.svg = function () {
       return (
-        Boolean(b.createElementNS) && Boolean(b.createElementNS(r.svg, "svg").createSVGRect)
+        Boolean(b.createElementNS) &&
+        Boolean(b.createElementNS(r.svg, "svg").createSVGRect)
       );
     }),
     (s.inlinesvg = function () {
       var a = b.createElement("div");
-      return (
-        (a.innerHTML = "<svg/>"),
-        (a.firstChild && a.firstChild.namespaceURI) == r.svg
-      );
+      return (a.innerHTML = "<svg/>"), a.firstChild?.namespaceURI == r.svg;
     }),
     (s.smil = function () {
       return (
@@ -538,10 +540,12 @@
           s.shivCSS &&
             !g &&
             !c.hasCSS &&
-            (c.hasCSS = Boolean(l(
-              a,
-              "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}",
-            ))),
+            (c.hasCSS = Boolean(
+              l(
+                a,
+                "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}",
+              ),
+            )),
           k || q(a, c),
           a
         );
@@ -756,8 +760,8 @@
                 (d(e) || d(j)) &&
                   f.load(function () {
                     k(),
-                      e && e(i.origUrl, h, g),
-                      j && j(i.origUrl, h, g),
+                      e?.(i.origUrl, h, g),
+                      j?.(i.origUrl, h, g),
                       (y[i.url] = 2);
                   })));
       }
@@ -790,7 +794,7 @@
                       : (j[n] = (function (a) {
                           return function () {
                             var b = [].slice.call(arguments);
-                            a && a.apply(this, b), l();
+                            a?.apply(this, b), l();
                           };
                         })(k[n]))),
                   g(a[n], j, b, n, h));
