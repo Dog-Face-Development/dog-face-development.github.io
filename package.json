@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "astro dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "playwright test",
+    "test": "playwright test"
   },
   "repository": {
     "type": "git",
