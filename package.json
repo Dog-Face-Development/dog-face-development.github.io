@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Dog-Face-Development/dog-face-development.github.io/issues"
   },
-  "homepage": "https://github.com/Dog-Face-Development/dog-face-development.github.io#readme"
+  "homepage": "https://github.com/Dog-Face-Development/dog-face-development.github.io#readme",
+  "dependencies": {
+    "@playwright/test": "^1.40.1",
+    "playwright": "^1.40.1"
+  }
 }
