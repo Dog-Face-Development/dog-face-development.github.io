@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Dog-Face-Development/dog-face-development.github.io#readme",
   "dependencies": {
-    "@playwright/test": "^1.40.1",
-    "playwright": "^1.40.1"
+    "@playwright/test": "^1.56.1",
+    "playwright": "^1.56.1"
   }
 }
